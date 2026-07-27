@@ -1,0 +1,318 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0d6efd;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:16px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd43b;
+}
+
+
+section{
+    padding:100px 10%;
+}
+
+
+
+.home{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0d6efd,#4da3ff);
+    color:white;
+}
+
+.home h3{
+    font-size:26px;
+}
+
+.home h1{
+    font-size:55px;
+    margin:15px 0;
+}
+
+.home h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.home p{
+    max-width:750px;
+    margin:auto;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin:30px 10px 0;
+    padding:12px 28px;
+    background:white;
+    color:#0d6efd;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffd43b;
+    color:#000;
+}
+
+
+
+section h2{
+    text-align:center;
+    color:#0d6efd;
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+
+
+#about p{
+    max-width:900px;
+    margin:20px auto;
+    text-align:center;
+    font-size:17px;
+}
+
+
+.card{
+    background:white;
+    padding:25px;
+    margin:20px auto;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    max-width:900px;
+}
+
+.card h3{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+.card h4{
+    margin-bottom:15px;
+    color:#555;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card li{
+    margin:10px 0;
+}
+
+
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.skills .card{
+    text-align:center;
+}
+
+.skills p{
+    margin:8px 0;
+}
+
+
+#projects .card:hover{
+    transform:translateY(-6px);
+    transition:.3s;
+}
+
+
+
+form{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
+    font-size:16px;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#0d6efd;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#0d6efd;
+    color:white;
+    font-size:17px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#084298;
+}
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:30px 10px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+footer a:hover{
+    color:#ffd43b;
+}
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    margin:8px;
+    display:inline-block;
+}
+
+.home h1{
+    font-size:40px;
+}
+
+.home h2{
+    font-size:22px;
+}
+
+.home p{
+    font-size:16px;
+}
+
+section{
+    padding:80px 7%;
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+    font-size:22px;
+}
+
+nav a{
+    display:block;
+    margin:8px 0;
+}
+
+.home h1{
+    font-size:32px;
+}
+
+.home h2{
+    font-size:18px;
+}
+
+.home h3{
+    font-size:20px;
+}
+
+.btn{
+    display:block;
+    margin:15px auto;
+    width:220px;
+}
+
+section h2{
+    font-size:28px;
+}
+
+}
+
+/* Active Navigation */
+
+nav a.active{
+    color:#ffd43b;
+    font-weight:600;
+}
+
+/* Fade Animation */
+
+.card{
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.6s ease;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
